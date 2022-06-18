@@ -14,14 +14,14 @@ Pod::Spec.new do |spec|
   spec.swift_version = '5.0'
   spec.source_files = 'rlottie/src/**/*.cpp','rlottie/src/**/*.h','rlottie/inc/**/*.h','LottieInstance.mm','config.h'
   spec.exclude_files='rlottie/src/vector/vdrawhelper_neon.cpp','rlottie/src/vector/stb/**/*','rlottie/src/lottie/rapidjson/msinttypes/**/*'
-  # spec.pod_target_xcconfig = {
-  #     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
-  #     'DEFINES_MODULE' => 'YES'
-  # }
+  spec.pod_target_xcconfig = {
+      'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
+      'DEFINES_MODULE' => 'YES'
+  }
   # spec.pod_target_xcconfig = {
   #   'DEFINES_MODULE' => 'NO'
   # }
-  # spec.pod_target_xcconfig = { 'OTHER_LDFLAGS' => ["-Dpixman_region_selfcheck(x)=1","-DLOTTIE_DISABLE_ARM_NEON=1"] }
+  spec.pod_target_xcconfig = { 'OTHER_LDFLAGS' => ["-Dpixman_region_selfcheck(x)=1","-DLOTTIE_DISABLE_ARM_NEON=1","-DLOTTIE_THREAD_SAFE=1", "-DLOTTIE_IMAGE_MODULE_DISABLED=1"] }
    spec.frameworks='Foundation'
 
   
