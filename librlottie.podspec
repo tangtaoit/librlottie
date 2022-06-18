@@ -11,7 +11,7 @@ Pod::Spec.new do |spec|
 
   spec.ios.deployment_target = '10.0'
   spec.platform     = :ios, '10.0'
-  spec.source_files = 'rlottie/src/**/*.cpp','rlottie/src/**/*.h','rlottie/inc/**/*.h','config.h','PublicHeaders/**/*'
+  spec.source_files = 'rlottie/src/**/*.cpp','rlottie/src/**/*.h','rlottie/inc/**/*.h','config.h','PublicHeaders/**/*','LottieInstance.mm'
   spec.exclude_files='rlottie/src/vector/vdrawhelper_neon.cpp','rlottie/src/vector/stb/**/*','rlottie/src/lottie/rapidjson/msinttypes/**/*'
   spec.public_header_files='PublicHeaders/**/*'
   spec.libraries = "stdc++","z","c++"
