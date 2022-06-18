@@ -1,4 +1,4 @@
-#import <RLottieBinding/LottieInstance.h>
+#import "LottieInstance.h"
 
 #include "rlottie.h"
 
