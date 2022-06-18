@@ -9,20 +9,22 @@ Pod::Spec.new do |spec|
   spec.module_name  = 'librlottie'
   spec.header_dir   = 'librlottie'
 
-  spec.ios.deployment_target = '9.0'
-  spec.platform     = :ios, '9.0'
+  spec.ios.deployment_target = '10.0'
+  spec.platform     = :ios, '10.0'
   spec.swift_version = '5.0'
-  spec.source_files = 'rlottie/src/**/*.cpp','rlottie/src/**/*.h','rlottie/inc/**/*.h','LottieInstance.mm','config.h'
+  spec.source_files = 'rlottie/src/**/*.cpp','rlottie/src/**/*.h','rlottie/inc/**/*.h','config.h','PublicHeaders/**/*'
   spec.exclude_files='rlottie/src/vector/vdrawhelper_neon.cpp','rlottie/src/vector/stb/**/*','rlottie/src/lottie/rapidjson/msinttypes/**/*'
-  spec.pod_target_xcconfig = {
-      'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
-      'DEFINES_MODULE' => 'YES'
-  }
+  spec.public_header_files='PublicHeaders/**/*'
+  spec.libraries = "stdc++","z","c++"
+  spec.requires_arc = true
+  # spec.pod_target_xcconfig = {
+  #     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
+  #     'DEFINES_MODULE' => 'YES'
+  # }
+  spec.xcconfig = { "OTHER_LDFLAGS" => "-ObjC" }
   # spec.pod_target_xcconfig = {
   #   'DEFINES_MODULE' => 'NO'
   # }
   spec.pod_target_xcconfig = { 'OTHER_CFLAGS' => ["-Dpixman_region_selfcheck(x)=1","-DLOTTIE_DISABLE_ARM_NEON=1","-DLOTTIE_THREAD_SAFE=1", "-DLOTTIE_IMAGE_MODULE_DISABLED=1"] }
-   spec.frameworks='Foundation'
-   spec.libraries = 'c++'
   
 end
