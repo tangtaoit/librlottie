@@ -12,8 +12,8 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target = '9.0'
   spec.platform     = :ios, '9.0'
   spec.swift_version = '5.0'
-  spec.source_files = 'rlottie/src/**/*.cpp','rlottie/src/**/*.h','rlottie/inc/**/*.h'
-  spec.exclude_files='rlottie/src/vector/vdrawhelper_neon.cpp','rlottie/src/vector/stb/**/*','rlottie/src/lottie/rapidjson/msinttypes/**/*','LottieInstance.mm','config.h'
+  spec.source_files = 'rlottie/src/**/*.cpp','rlottie/src/**/*.h','rlottie/inc/**/*.h','LottieInstance.mm','config.h'
+  spec.exclude_files='rlottie/src/vector/vdrawhelper_neon.cpp','rlottie/src/vector/stb/**/*','rlottie/src/lottie/rapidjson/msinttypes/**/*'
   # spec.pod_target_xcconfig = {
   #     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
   #     'DEFINES_MODULE' => 'YES'
