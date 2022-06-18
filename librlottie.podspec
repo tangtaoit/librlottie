@@ -21,7 +21,6 @@ Pod::Spec.new do |spec|
   #     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
   #     'DEFINES_MODULE' => 'YES'
   # }
-  spec.xcconfig = { "OTHER_LDFLAGS" => "-ObjC" }
   # spec.pod_target_xcconfig = {
   #   'DEFINES_MODULE' => 'NO'
   # }
