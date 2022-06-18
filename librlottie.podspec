@@ -21,7 +21,7 @@ Pod::Spec.new do |spec|
   # spec.pod_target_xcconfig = {
   #   'DEFINES_MODULE' => 'NO'
   # }
-  spec.pod_target_xcconfig = { 'OTHER_LDFLAGS' => ["-Dpixman_region_selfcheck(x)=1","-DLOTTIE_DISABLE_ARM_NEON=1","-DLOTTIE_THREAD_SAFE=1", "-DLOTTIE_IMAGE_MODULE_DISABLED=1"] }
+  spec.pod_target_xcconfig = { 'OTHER_CFLAGS' => ["-Dpixman_region_selfcheck(x)=1","-DLOTTIE_DISABLE_ARM_NEON=1","-DLOTTIE_THREAD_SAFE=1", "-DLOTTIE_IMAGE_MODULE_DISABLED=1"] }
    spec.frameworks='Foundation'
 
   
