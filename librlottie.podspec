@@ -13,7 +13,7 @@ Pod::Spec.new do |spec|
   spec.platform     = :ios, '10.0'
   spec.source_files = 'rlottie/src/**/*.cpp','rlottie/src/**/*.h','rlottie/inc/**/*.h','config.h','PublicHeaders/**/*','LottieInstance.mm'
   spec.exclude_files='rlottie/src/vector/vdrawhelper_neon.cpp','rlottie/src/vector/stb/**/*','rlottie/src/lottie/rapidjson/msinttypes/**/*'
-  spec.public_header_files='PublicHeaders/**/*'
+  spec.public_header_files='PublicHeaders/**/*','rlottie/inc/**/*.h'
   spec.libraries = "stdc++","z","c++"
   spec.pod_target_xcconfig = {
       'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
