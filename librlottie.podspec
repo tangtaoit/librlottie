@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
   spec.module_name  = 'librlottie'
   spec.header_dir   = 'librlottie'
 
-  spec.ios.deployment_target = '9.0'
+  spec.ios.deployment_target = '10.0'
   # spec.osx.deployment_target = '10.10'
   # spec.tvos.deployment_target = '9.0'
   # spec.watchos.deployment_target = '2.0'
@@ -19,30 +19,17 @@ Pod::Spec.new do |spec|
   spec.public_header_files='PublicHeaders/**/*','include/rlottie/rlottie_capi.h', 'include/rlottie/rlottiecommon.h','Xcode/librlottie.h'
  
   spec.pod_target_xcconfig = {
-      'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
-      'DEFINES_MODULE' => 'YES'
+      'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64'
   }
-  # spec.pod_target_xcconfig = {
-  #     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
-  #     'DEFINES_MODULE' => 'YES'
-  #   }
-  # spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  # spec.pod_target_xcconfig = {
-  #     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
-  #     'DEFINES_MODULE' => 'YES'
-  # }
-  # spec.pod_target_xcconfig = {
-  #   'DEFINES_MODULE' => 'NO'
-  # }
+
   
   
   spec.pod_target_xcconfig = { 
     'OTHER_CFLAGS' => ["-Dpixman_region_selfcheck(x)=1","-DLOTTIE_DISABLE_ARM_NEON=1","-DLOTTIE_THREAD_SAFE=1", "-DLOTTIE_IMAGE_MODULE_DISABLED=1"] ,
-    'HEADER_SEARCH_PATHS' => '$(inherited) ${PODS_TARGET_SRCROOT}/generate ${PODS_TARGET_SRCROOT}/PublicHeaders',
-    'SWIFT_INCLUDE_PATHS' => '${PODS_TARGET_SRCROOT}/Xcode/module.modulemap'
+    'HEADER_SEARCH_PATHS' => '$(inherited) ${PODS_TARGET_SRCROOT}/generate ${PODS_TARGET_SRCROOT}/PublicHeaders'
   }
 
   spec.libraries = 'c++'
-  spec.preserve_paths = 'rlottie','include', 'generate','Xcode/module.modulemap'
+  spec.preserve_paths = 'rlottie','include', 'generate'
   
 end
