@@ -11,7 +11,7 @@ Pod::Spec.new do |spec|
 
   spec.ios.deployment_target = '10.0'
   spec.platform     = :ios, '10.0'
-  spec.source_files = 'rlottie/src/**/*.cpp','rlottie/src/**/*.h','rlottie/inc/**/*.h','config.h','PublicHeaders/**/*','LottieInstance.mm'
+  spec.source_files = 'rlottie/src/**/*.{h,c,cpp}','rlottie/src/**/*.{h,c,cpp}','rlottie/inc/**/*.{h,c,cpp}','config.h','PublicHeaders/**/*','LottieInstance.mm'
   spec.exclude_files='rlottie/src/vector/vdrawhelper_neon.cpp','rlottie/src/vector/stb/**/*','rlottie/src/lottie/rapidjson/msinttypes/**/*'
   spec.public_header_files='PublicHeaders/**/*','rlottie/inc/**/*.h'
   spec.libraries = "stdc++","z","c++"
@@ -28,5 +28,5 @@ Pod::Spec.new do |spec|
   #   'DEFINES_MODULE' => 'NO'
   # }
   spec.pod_target_xcconfig = { 'OTHER_CFLAGS' => ["-Dpixman_region_selfcheck(x)=1","-DLOTTIE_DISABLE_ARM_NEON=1","-DLOTTIE_THREAD_SAFE=1", "-DLOTTIE_IMAGE_MODULE_DISABLED=1"] }
-  
+  s.libraries = 'c++'
 end
