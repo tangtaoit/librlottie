@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = 'librlottie'
-  spec.version      = '0.1.4'
+  spec.version      = '0.1.5'
   spec.license      =  { :type => 'Apache 2',  }
   spec.homepage     = 'http://texturegroup.org'
   spec.authors      = { 'tangtao' => '412145540@qq.com' }
