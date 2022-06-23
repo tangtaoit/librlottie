@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name         = 'librlottie'
-  spec.version      = '0.1.2'
+  spec.version      = '0.1.3'
   spec.license      =  { :type => 'Apache 2',  }
   spec.homepage     = 'http://texturegroup.org'
   spec.authors      = { 'tangtao' => '412145540@qq.com' }
@@ -37,6 +37,6 @@ Pod::Spec.new do |spec|
   }
 
   spec.libraries = 'c++'
-  spec.preserve_paths = 'rlottie','include', 'generate'
+  # spec.preserve_paths = 'rlottie','include', 'generate'
   
 end
