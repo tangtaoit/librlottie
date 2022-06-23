@@ -14,7 +14,7 @@ Pod::Spec.new do |spec|
   # spec.tvos.deployment_target = '9.0'
   # spec.watchos.deployment_target = '2.0'
   spec.swift_version = '5.0'
-  spec.source_files = 'rlottie/src/**/*.{h,c,cpp}','rlottie/src/**/*.{h,c,cpp}','rlottie/inc/**/*.{h,c,cpp}','generate/**/*.{h,c,cpp}', 'include/**/*.h','PublicHeaders/**/*','Xcode/librlottie.h','LottieInstance.mm'
+  spec.source_files = 'Module/*.swft','rlottie/src/**/*.{h,c,cpp}','rlottie/src/**/*.{h,c,cpp}','rlottie/inc/**/*.{h,c,cpp}','generate/**/*.{h,c,cpp}', 'include/**/*.h','PublicHeaders/**/*','Xcode/librlottie.h','LottieInstance.mm'
   spec.exclude_files='rlottie/src/vector/vdrawhelper_neon.cpp','rlottie/src/vector/stb/**/*','rlottie/src/lottie/rapidjson/msinttypes/**/*'
   spec.public_header_files='PublicHeaders/**/*','include/rlottie/rlottie_capi.h', 'include/rlottie/rlottiecommon.h','Xcode/librlottie.h'
  
