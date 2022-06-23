@@ -39,10 +39,10 @@ Pod::Spec.new do |spec|
   spec.pod_target_xcconfig = { 
     'OTHER_CFLAGS' => ["-Dpixman_region_selfcheck(x)=1","-DLOTTIE_DISABLE_ARM_NEON=1","-DLOTTIE_THREAD_SAFE=1", "-DLOTTIE_IMAGE_MODULE_DISABLED=1"] ,
     'HEADER_SEARCH_PATHS' => '$(inherited) ${PODS_TARGET_SRCROOT}/generate ${PODS_TARGET_SRCROOT}/PublicHeaders',
-    'SWIFT_INCLUDE_PATHS' => '${PODS_TARGET_SRCROOT}/Module/module.modulemap'
+    'SWIFT_INCLUDE_PATHS' => '${PODS_TARGET_SRCROOT}/Xcode/module.modulemap'
   }
 
   spec.libraries = 'c++'
-  spec.preserve_paths = 'rlottie','include', 'generate','Module/module.modulemap'
+  spec.preserve_paths = 'rlottie','include', 'generate','Xcode/module.modulemap'
   
 end
