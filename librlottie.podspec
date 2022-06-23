@@ -10,13 +10,13 @@ Pod::Spec.new do |spec|
   spec.header_dir   = 'librlottie'
 
   spec.ios.deployment_target = '9.0'
-  spec.osx.deployment_target = '10.10'
-  spec.tvos.deployment_target = '9.0'
-  spec.watchos.deployment_target = '2.0'
+  # spec.osx.deployment_target = '10.10'
+  # spec.tvos.deployment_target = '9.0'
+  # spec.watchos.deployment_target = '2.0'
 
-  spec.source_files = 'rlottie/src/**/*.{h,c,cpp}','rlottie/src/**/*.{h,c,cpp}','rlottie/inc/**/*.{h,c,cpp}','generate/**/*.{h,c,cpp}', 'include/**/*.h','PublicHeaders/**/*','LottieInstance.mm'
+  spec.source_files = 'rlottie/src/**/*.{h,c,cpp}','rlottie/src/**/*.{h,c,cpp}','rlottie/inc/**/*.{h,c,cpp}','generate/**/*.{h,c,cpp}', 'include/**/*.h','PublicHeaders/**/*','Xcode/librlottie.h','LottieInstance.mm'
   spec.exclude_files='rlottie/src/vector/vdrawhelper_neon.cpp','rlottie/src/vector/stb/**/*','rlottie/src/lottie/rapidjson/msinttypes/**/*'
-  spec.public_header_files='PublicHeaders/**/*','include/rlottie/rlottie_capi.h', 'include/rlottie/rlottiecommon.h'
+  spec.public_header_files='PublicHeaders/**/*','include/rlottie/rlottie_capi.h', 'include/rlottie/rlottiecommon.h','Xcode/librlottie.h'
 
   # spec.pod_target_xcconfig = {
   #     'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64',
@@ -37,6 +37,6 @@ Pod::Spec.new do |spec|
   }
 
   spec.libraries = 'c++'
-  # spec.preserve_paths = 'rlottie','include', 'generate'
+  spec.preserve_paths = 'rlottie','include', 'generate'
   
 end
